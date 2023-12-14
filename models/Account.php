@@ -53,7 +53,7 @@ class Account extends SecureModel
             [['id_branch', 'username'], 'unique', 'targetAttribute' => ['id_branch', 'username']],
             [['email'], 'email'],
             ['password_hash_repeat', 'compare', 'compareAttribute' => 'password_hash', 'message' => 'Password don\'t match'],
-            [['no_telp', 'pharmacist_sia_number', 'sip_number'], 'string', 'max' => 45],
+            [['no_telp'], 'string', 'max' => 45],
             [['id_branch'], 'exist', 'skipOnError' => true, 'targetClass' => MstBranch::className(), 'targetAttribute' => ['id_branch' => 'id_branch']],
         ];
     }

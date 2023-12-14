@@ -22,12 +22,12 @@ $this->registerCssFile('https://code.ionicframework.com/ionicons/2.0.1/css/ionic
 </head>
 <body class="hold-transition login-page">
 <?php  $this->beginBody() ?>
+<style>
+    .login-box {
+        min-width: 450px;
+    }
+</style>
 <div class="login-box">
-    <div class="login-logo">
-        <?= Yii::$app->name ?>
-    </div>
-    <!-- /.login-logo -->
-
     <?= $content ?>
 </div>
 <!-- /.login-box -->

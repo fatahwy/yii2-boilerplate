@@ -86,7 +86,13 @@ if ($user) {
                     }
                 }
 
-                echo \hail812\adminlte\widgets\Menu::widget(['items' => $d]);
+                $options = [
+                    'class' => 'nav nav-pills nav-sidebar flex-column',
+                    'data-widget' => 'treeview',
+                    'role' => 'menu',
+                ];
+
+                echo \hail812\adminlte\widgets\Menu::widget(['items' => $d, 'options' => $options]);
                 ?>
             </nav>
             <!-- /.sidebar-menu -->
